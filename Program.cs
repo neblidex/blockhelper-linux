@@ -1522,6 +1522,7 @@ namespace BlockHelper
 				BlockHelperLog(source+": "+e.ToString()); //Write the exception to file
 			}
 			if(lockfile != null){
+				lockfile.Unlock(0, 0); //Unlock the file
 				lockfile.Close();
 				lockfile = null;
 			}
